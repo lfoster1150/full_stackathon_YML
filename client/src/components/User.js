@@ -2,11 +2,9 @@ import React from 'react'
 
 const User = () => {
 
-  return (
-    
-  )
+  return <div></div>
 }
 
 
 
-export default Tasks
+export default User

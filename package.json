@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/lfoster1150/full_stackathon_YML#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "create-react-app": "^4.0.3",
     "express": "^4.17.1",
     "mongoose": "^6.0.1",
     "morgan": "^1.10.0"
