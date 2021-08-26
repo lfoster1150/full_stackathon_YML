@@ -1,10 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
+import User from '../components/User'
+import InputField from '../components/InputField'
+import { BASE_URL } from '../globals'
 
-const Home = () => {
+const Home = (props) => {
+  const [currentUserId, setCurrentUserId] = useState('')
+  const [usernameQuery, setUsernameQuery] = useState('')
+
+  const getUser = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/users/${usernameQuery}`)
+      setCurrentUserId(res)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const handleChange = (event) => {
+    setUsernameQuery(event.target.value)
+  }
+
   return (
     <div className="App">
       <main>
-        <section>{/* <User task={task} /> */}</section>
+        <h2>Enter your username:</h2>
+        <InputField
+          function="username"
+          onSubmit={getUser}
+          value={usernameQuery}
+          onChange={handleChange}
+        />
       </main>
     </div>
   )
