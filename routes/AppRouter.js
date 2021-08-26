@@ -3,6 +3,6 @@ const ExampleRouter = require('./ExampleRouter')
 
 const AppRouter = Router()
 
-AppRouter.use('/examples', ExampleRouter)
+// AppRouter.use('/examples', ExampleRouter)
 
 module.exports = AppRouter
