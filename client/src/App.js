@@ -1,17 +1,17 @@
-import User from './components/User'
-import './App.css';
+import React from 'react'
+import './App.css'
+import Home from './pages/Home'
+
 
 function App() {
   return (
     <div className="App">
-      <h1> Task Manager</h1>
-      <main>
-        <section>
-          <User />
-        </section>
-      </main>
+      <header>
+        <h1> Task Manager</h1>
+      </header>
+      <Home />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
