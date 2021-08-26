@@ -26,9 +26,7 @@ A simple, yet elegant task list that utilizes the MERN stack.
 
 ### **_Getting Started_**
 
-Coming soon...
-
-This is the section that explains how to open up the [webpage]()
+ERD:
 
 ---
 
