@@ -16,9 +16,7 @@ const Home = (props) => {
   const getUser = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.get(
-        `http://localhost:3001/api/users/${usernameQuery}`
-      )
+      const res = await axios.get(`${BASE_URL}/users/${usernameQuery}`)
       console.log(res)
       props.setCurrentUsername(usernameQuery)
       sendToUserPage()
@@ -31,7 +29,7 @@ const Home = (props) => {
     e.preventDefault()
     try {
       const res = await axios
-        .post(`http://localhost:3001/api/users`, {
+        .post(`${BASE_URL}/users`, {
           userName: newUsernameQuery
         })
         .then(function (response) {

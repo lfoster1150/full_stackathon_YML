@@ -19,7 +19,7 @@ const User = (props) => {
     console.log(props)
     try {
       const res = await axios.get(
-        `http://localhost:3001/api/users/${props.match.params.userName}/taskLists`
+        `${BASE_URL}/users/${props.match.params.userName}/taskLists`
       )
       setTaskLists(res.data.results)
     } catch (err) {
