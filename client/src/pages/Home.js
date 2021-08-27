@@ -57,7 +57,6 @@ const Home = (props) => {
           value={usernameQuery}
           onChange={handleChange}
         />
-        <User />
       </main>
       <section className="add-new-user">
         <h2>Enter a username to create an account:</h2>

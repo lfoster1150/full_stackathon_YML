@@ -1,13 +1,9 @@
 import React from 'react'
 
-const Tasks = (props) => {
+const Tasks = () => {
 
   return (
-    <ul>
-      {props.tasks.map((task) => (
-        <li>{task}<button onClick={()=>props.removeTask()}>Remove</button></li>
-      ))}
-    </ul>
+    
   )
 }
 
