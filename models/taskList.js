@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const Tasklist = new Schema(
+const TaskList = new Schema(
   {
     list_name: { type: String, required: true },
     tasks: [{ type: Schema.Types.ObjectId, ref: 'tasks' }]
@@ -8,4 +8,4 @@ const Tasklist = new Schema(
   { timestamps: true }
 )
 
-module.exports = Tasklist
+module.exports = TaskList

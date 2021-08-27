@@ -3,7 +3,7 @@ const { Schema } = require('mongoose')
 const User = new Schema(
   {
     userName: { type: String, required: true, unique: true, sparse: true },
-    tasks_lists: [{ type: Schema.Types.ObjectId, ref: 'task_lists' }]
+    tasksLists: [{ type: Schema.Types.ObjectId, ref: 'tasksLists' }]
   },
   { timestamps: true }
 )
