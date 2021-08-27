@@ -10,18 +10,16 @@ const User = (props) => {
   const [selectedTaskList, setSelectedTaskList] = useState('')
 
   const testTaskLists = [
-    { listName: 'Monday Task List' },
-    { listName: 'Tuesday Task List' },
-    { listName: 'Wed Task List' },
-    { listName: 'Thurs Task List' },
-    { listName: 'Fri Task List' }
+    { listName: 'Vaccuum' },
+    { listName: 'Sweep and Mop' },
+    { listName: 'Get groceries' }
   ]
 
   const getTaskLists = async () => {
     console.log(props)
     try {
       const res = await axios.get(
-        `http://localhost:3001/api/users/${props.match.params.userName}/taskLists`
+        `${BASE_URL}/users/${props.match.params.userName}/taskLists`
       )
       setTaskLists(res.data.results)
     } catch (err) {
@@ -72,7 +70,7 @@ const User = (props) => {
 
   return (
     <div className="user-container">
-      <p></p>
+      <p>Welcome {}</p>
       <h2>Please select a list below, or create a new list:</h2>
       <div className="list-container">
         {taskLists ? (
@@ -86,8 +84,8 @@ const User = (props) => {
         )}
       </div>
       <InputField
-        function="New List"
-        text="Add List"
+        function="Add Task"
+        text="+"
         onSubmit={createNewList}
         value={listNameInput}
         onChange={handleChange}

@@ -26,15 +26,13 @@ const getTaskById = async (req, res) => {
 }
 const createTaskList = async (req, res) => {
   try {
-    const attachedUser = await User.find({ userName: req.params.userName })
+    const attachedUser = await User.findOne({ userName: req.params.userName })
     const newTaskList = await TaskList.create(req.body)
-    console.log(attachedUser.tasksLists)
-    // attachedUser.tasksLists.push(newTaskList)
-    // attachedUser.save()
-    //.push(newTaskList)
+    console.log(...attachedUser.tasksLists)
+    let newLists = { ...attachedUser.tasksLists, newTaskList }
+    attachedUser.update({ tasksLists: newLists })
 
-    // const newUser = await User.create(req.body)
-    // await newUser.save()
+    // attachedUser.save()
 
     return res.status(201).json({
       newTaskList
