@@ -12,29 +12,8 @@ function App() {
       <header>
         <h1> Task Manager</h1>
       </header>
-      <Switch>
-        <Route
-          exact
-          path="/"
-          component={(props) => (
-            <Home
-              {...props}
-              currentUsername={currentUsername}
-              setCurrentUsername={setCurrentUsername}
-            />
-          )}
-        />
-        <Route
-          path="/users"
-          component={(props) => (
-            <User {...props} currentUsername={currentUsername} />
-          )}
-        />
-        {/* <Route
-          path="/users/:userName/taskLists/:taskListId"
-          component={TaskList}
-        /> */}
-      </Switch>
+      <Home />
+      
     </div>
   )
 }
