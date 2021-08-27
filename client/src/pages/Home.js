@@ -52,6 +52,9 @@ const Home = (props) => {
 
   const handleChange = (event) => {
     setUsernameQuery(event.target.value)
+  }
+
+  const handleChangeNew = (event) => {
     setNewUsernameQuery(event.target.value)
   }
 
@@ -78,7 +81,7 @@ const Home = (props) => {
           text="Sumbit"
           onSubmit={postNewUser}
           value={newUsernameQuery}
-          onChange={handleChange}
+          onChange={handleChangeNew}
         />
       </section>
     </div>
