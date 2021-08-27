@@ -10,6 +10,7 @@ function App() {
         <h1> Task Manager</h1>
       </header>
       <Home />
+      
     </div>
   )
 }
