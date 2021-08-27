@@ -10,7 +10,7 @@ AppRouter.get('/task/:id', controllers.getTaskById)
 AppRouter.get('/tasklist', controllers.createTaskList)
 AppRouter.get('/tasklist/:id', controllers.getTaskListById)
 
-AppRouter.post('/users/', controllers.createUser)
+AppRouter.post('/users', controllers.createUser)
 AppRouter.get('/users/:userName', controllers.userByName)
 
 module.exports = AppRouter

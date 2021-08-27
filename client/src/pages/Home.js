@@ -8,26 +8,38 @@ const Home = (props) => {
   const [usernameQuery, setUsernameQuery] = useState('')
   const [newUsernameQuery, setNewUsernameQuery] = useState('')
 
-  const getUser = async () => {
+  const sendToUserPage = () => {
+    console.log(props.history)
+    props.history.push(`/users/${props.currentUsername}`)
+  }
+
+  const getUser = async (e) => {
+    e.preventDefault()
     try {
-      const res = await axios.get(`${BASE_URL}/users/${usernameQuery}`)
+      const res = await axios.get(
+        `http://localhost:3001/api/users/${usernameQuery}`
+      )
       props.setCurrentUsername(res)
+      sendToUserPage()
     } catch (err) {
       console.log(err)
     }
   }
 
-  const postNewUser = async () => {
+  const postNewUser = async (e) => {
+    e.preventDefault()
     try {
       const res = await axios
-        .post(`${BASE_URL}/users/${newUsernameQuery}`, {
+        .post(`http://localhost:3001/api/users`, {
           userName: newUsernameQuery
         })
         .then(function (response) {
           console.log(response)
         })
+        .catch((error) => {
+          console.log(error)
+        })
       setUsernameQuery(newUsernameQuery)
-      getUser()
     } catch (err) {
       console.log(err)
     }
