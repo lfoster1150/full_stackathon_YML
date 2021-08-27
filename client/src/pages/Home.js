@@ -52,7 +52,7 @@ const Home = (props) => {
         <h2>Enter your username:</h2>
         <InputField
           function="username"
-          text="Sumbit"
+          text="Submit"
           onSubmit={getUser}
           value={usernameQuery}
           onChange={handleChange}
@@ -62,7 +62,7 @@ const Home = (props) => {
         <h2>Enter a username to create an account:</h2>
         <InputField
           function="new username"
-          text="Sumbit"
+          text="Submit"
           onSubmit={postNewUser}
           value={newUsernameQuery}
           onChange={handleChange}
