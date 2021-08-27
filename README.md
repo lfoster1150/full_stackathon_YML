@@ -1,53 +1,63 @@
-# Project Title
+# Task list
 
-## Date: 07/27/2021
+### Date: 07/27/2021
 
-### By: Luke Foster / Micah Stewart / Yousof Wakili
+### Contributors: Luke Foster / Micah Stewart / Yousof Wakili
 
-#### [GitHub](https://github.com/lfoster1150) | [LinkedIn](https://www.linkedin.com/in/luke-foster-61a31782/)
+#### Social Media
+
+---
+
+#### GitHub
+
+#### [Luke Foster](https://github.com/lfoster1150)
+
+#### [Yousof Wakili](https://github.com/ywakili18)
+
+#### [Micah Stewart ](https://github.com/lfoster1150)
+
+---
+
+LinkedIn
+
+#### [Luke Foster](https://www.linkedin.com/in/luke-foster-61a31782/)
+
+#### [Yousof Wakili](https://www.linkedin.com/in/yw1818/)
 
 ---
 
 ### **_Description_**
 
-A simple, yet elegant task list that utilizes the MERN stack.
+A collaborative "hackathon" project showcasing MERN stack fundamentals. This website showcases a feature that will take your username, once entered will prompt you into a daily task list.
 
 ---
 
 ### **_Technologies Used_**
 
-- Reactjs
-- Node
-  - Expressjs
+#### MERN Stack
+
 - MongoDB
-  - Mongoose
-
----
-
-### **_Getting Started_**
-
-ERD:
+- Expressjs
+- Reactjs
+- Nodejs
+- Deployed with Heroku
 
 ---
 
 ### **_Screen Shots_**
 
-##### Orange Cat
+##### Login
 
-![orangeCat](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fblogs.columbian.com%2Fcat-tales%2Fwp-content%2Fuploads%2Fsites%2F43%2F2017%2F12%2FOrange-Cat.jpg&f=1&nofb=1)
+![Login](https://i.ibb.co/PmFYfWD/Screen-Shot-2021-08-27-at-11-15-38-AM.png)
 
-##### Puppy
+##### Task List
 
-![pup](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupnorthpyrenees.com%2Fwp-content%2Fuploads%2F2019%2F09%2Freceived_2372823849623603.jpeg.jpg&f=1&nofb=1)
+![Task list](https://i.ibb.co/Jmf5TdM/Screen-Shot-2021-08-27-at-11-19-13-AM.png)
 
 ### **_Future Updates_**
 
 - [ ] Multiple task lists
 - [ ] Sub-header
 - [ ] Multiple pages for users
-
-### **_Credits_**
-
-##### Animal Searches: [Orange Cat Search](https://duckduckgo.com/?q=orange+cat&t=h_&iax=images&ia=images) | [Puppy Search](https://duckduckgo.com/?q=puppy&t=h_&iar=images&iax=images&ia=images)
-
-##### Markdown Info: [Markdown Guide](https://ia.net/writer/support/general/markdown-guide) | [Markdown Cheetsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+- [ ] Add Remove task feature
+- [ ] Store username and password
