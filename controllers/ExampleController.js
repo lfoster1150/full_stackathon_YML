@@ -1,7 +1,5 @@
 // Reqiure Models Here
-const Task = require('../models/index')
-const { User } = require('../models/index')
-const Tasklists = require('../models/index')
+const { User, TaskList, Task } = require('../models/index')
 
 const createTask = async (req, res) => {
   try {
@@ -28,19 +26,28 @@ const getTaskById = async (req, res) => {
 }
 const createTaskList = async (req, res) => {
   try {
-    const taskList = await new Tasklists(req.body)
-    await taskList.save()
+    const attachedUser = await User.find({ userName: req.params.userName })
+    const newTaskList = await TaskList.create(req.body)
+    console.log(attachedUser.tasksLists)
+    // attachedUser.tasksLists.push(newTaskList)
+    // attachedUser.save()
+    //.push(newTaskList)
+
+    // const newUser = await User.create(req.body)
+    // await newUser.save()
+
     return res.status(201).json({
-      taskList
+      newTaskList
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })
   }
 }
+
 const getTaskListById = async (req, res) => {
   try {
     const { id } = req.params
-    const taskList = await Tasklists.findById(id)
+    const taskList = await TaskList.findById(id)
     if (taskList) {
       return res.status(200).json({ taskList })
     }
@@ -51,8 +58,23 @@ const getTaskListById = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
+
+const getTaskListByUserName = async (req, res) => {
+  try {
+    const { userName } = req.params
+    const taskLists = await User.find({ userName: userName })
+    if (taskList) {
+      return res.status(200).json({ taskList })
+    }
+    return res
+      .status(404)
+      .send('Task list with the specified ID does not exists')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const userByName = async (req, res) => {
-  console.log(req.params.userName)
   try {
     const { userName } = req.params
     const userByName = await User.find({ userName: userName })
@@ -67,7 +89,6 @@ const userByName = async (req, res) => {
 // post request
 const createUser = async (req, res) => {
   try {
-    console.log('check')
     const newUser = await User.create(req.body)
     await newUser.save()
     if (newUser) {
@@ -100,5 +121,6 @@ module.exports = {
   getTaskListById,
   userByName,
   createUser,
-  getUserByNameId
+  getUserByNameId,
+  getTaskListByUserName
 }

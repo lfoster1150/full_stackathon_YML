@@ -9,8 +9,8 @@ const Home = (props) => {
   const [newUsernameQuery, setNewUsernameQuery] = useState('')
 
   const sendToUserPage = () => {
-    console.log(props.history)
-    props.history.push(`/users/${props.currentUsername}`)
+    console.log(props.currentUsername)
+    props.history.push(`/users/${usernameQuery}`)
   }
 
   const getUser = async (e) => {
@@ -19,7 +19,8 @@ const Home = (props) => {
       const res = await axios.get(
         `http://localhost:3001/api/users/${usernameQuery}`
       )
-      props.setCurrentUsername(res)
+      console.log(res)
+      props.setCurrentUsername(usernameQuery)
       sendToUserPage()
     } catch (err) {
       console.log(err)
