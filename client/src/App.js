@@ -30,10 +30,7 @@ function App() {
             <User {...props} currentUsername={currentUsername} />
           )}
         />
-        {/* <Route
-          path="/users/:userName/taskLists/:taskListId"
-          component={TaskList}
-        /> */}
+        <Route path="/taskLists" component={TaskList} />
       </Switch>
     </div>
   )
