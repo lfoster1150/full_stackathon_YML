@@ -26,6 +26,10 @@ LinkedIn
 
 ---
 
+#### [Component Hierachy Diagram & ERD](https://lucid.app/lucidchart/invitations/accept/inv_24d33a5d-bc6f-4f61-b1de-6b9782eb0c4e)
+
+---
+
 ### **_Description_**
 
 A collaborative "hackathon" project showcasing MERN stack fundamentals. This website showcases a feature that will take your username, once entered will prompt you into a daily task list.
