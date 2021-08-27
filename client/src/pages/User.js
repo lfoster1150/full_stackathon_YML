@@ -18,9 +18,10 @@ const User = (props) => {
   ]
 
   const getTaskLists = async () => {
+    console.log(props)
     try {
       const res = await axios.get(
-        `${BASE_URL}/users/${props.currentUserId}/task_lists`
+        `http://localhost:3001/api/users/${props.match.params.userName}/taskLists`
       )
       setTaskLists(res.data.results)
     } catch (err) {
@@ -65,8 +66,8 @@ const User = (props) => {
     }
   }, [taskListUpdated])
   useEffect(() => {
-    setTaskLists(testTaskLists)
-    // getTaskLists()
+    // setTaskLists(testTaskLists)
+    getTaskLists()
   }, [])
 
   return (
@@ -86,6 +87,7 @@ const User = (props) => {
       </div>
       <InputField
         function="New List"
+        text="Add List"
         onSubmit={createNewList}
         value={listNameInput}
         onChange={handleChange}

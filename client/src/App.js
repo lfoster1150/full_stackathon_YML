@@ -25,7 +25,7 @@ function App() {
           )}
         />
         <Route
-          path="/users"
+          path="/users/:userName"
           component={(props) => (
             <User {...props} currentUsername={currentUsername} />
           )}

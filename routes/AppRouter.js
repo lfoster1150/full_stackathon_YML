@@ -7,8 +7,9 @@ AppRouter.get('/', (req, res) => res.send('This is root!'))
 AppRouter.post('/task', controllers.createTask)
 AppRouter.get('/task/:id', controllers.getTaskById)
 
-AppRouter.get('/tasklist', controllers.createTaskList)
-AppRouter.get('/tasklist/:id', controllers.getTaskListById)
+AppRouter.post('/users/:userName/taskLists', controllers.createTaskList)
+AppRouter.get('/users/:userName/taskLists', controllers.getTaskListByUserName)
+AppRouter.get('/users/:userName/taskLists/:id', controllers.getTaskListById)
 
 AppRouter.post('/users', controllers.createUser)
 AppRouter.get('/users/:userName', controllers.userByName)
