@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const User = new Schema(
+const Tasklist = new Schema(
   {
     list_name: { type: String, required: true },
     tasks: [{ type: Schema.Types.ObjectId, ref: 'tasks' }]
@@ -8,4 +8,4 @@ const User = new Schema(
   { timestamps: true }
 )
 
-module.exports = User
+module.exports = Tasklist
