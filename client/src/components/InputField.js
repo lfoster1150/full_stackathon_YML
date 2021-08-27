@@ -10,7 +10,7 @@ export default function Input(props) {
         placeholder={props.function}
         onChange={props.onChange}
       />
-      <button type="submit">{props.function}</button>
+      <button type="submit">{props.text}</button>
     </form>
   )
 }
