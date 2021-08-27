@@ -52,11 +52,12 @@ const getTaskListById = async (req, res) => {
   }
 }
 const userByName = async (req, res) => {
+  console.log(req.params.userName)
   try {
     const { userName } = req.params
-    const userByName = await User.create(userName)
+    const userByName = await User.find({ userName: userName })
     if (userByName) {
-      return res.status(200).json({ userByName })
+      return res.status(200).json({ userName })
     }
     return res.status(404).send('User with the specified ID does not exists')
   } catch (error) {
@@ -66,6 +67,7 @@ const userByName = async (req, res) => {
 // post request
 const createUser = async (req, res) => {
   try {
+    console.log('check')
     const newUser = await User.create(req.body)
     await newUser.save()
     if (newUser) {
