@@ -12,3 +12,4 @@ const Tasks = (props) => {
     </ul>
   )
 }
+export default Tasks
