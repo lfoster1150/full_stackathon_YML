@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BASE_URL } from '../globals'
-import React, { useState, useEffect } from 'react'
 import Tasks from './Tasks'
-import Input from './Input'
+import Input from './InputField'
 
 const TaskList = (props) => {
   //state pass down//
